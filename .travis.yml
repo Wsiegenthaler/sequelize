@@ -9,8 +9,7 @@ node_js:
 
 branches:
   only:
-  - master
-  - v3
+  - deleted-at-fix
 
 env:
   global:
