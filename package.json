@@ -52,7 +52,8 @@
     "toposort-class": "^1.0.1",
     "uuid": "^3.0.0",
     "validator": "^8.0.0",
-    "wkx": "^0.4.1"
+    "wkx": "^0.4.1",
+    "snyk": "^1.316.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -135,7 +136,9 @@
     "sscce-mysql": "cross-env DIALECT=mysql npm run sscce",
     "sscce-postgres": "cross-env DIALECT=postgres npm run sscce",
     "sscce-sqlite": "cross-env DIALECT=sqlite npm run sscce",
-    "commitmsg": "validate-commit-msg"
+    "commitmsg": "validate-commit-msg",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": ">=4.0.0"
@@ -158,5 +161,6 @@
   },
   "release": {
     "analyzeCommits": "@bubltechnology/customizable-commit-analyzer"
-  }
+  },
+  "snyk": true
 }
